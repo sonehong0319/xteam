@@ -2,7 +2,7 @@
     pageEncoding="UTF-8" %>
 <%
 	response.sendRedirect(request.getContextPath()+"/main/main.do");
-	//하하
+	//세린이 바보
 %>
 
 
