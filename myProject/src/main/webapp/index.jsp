@@ -2,7 +2,7 @@
     pageEncoding="UTF-8" %>
 <%
 	response.sendRedirect(request.getContextPath()+"/main/main.do");
-	//테스트
+	//하하
 %>
 
 
