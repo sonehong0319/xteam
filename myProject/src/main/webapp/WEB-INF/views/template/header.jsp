@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
-<h2 class="align-center">회원제 게시판</h2>
 <div class="align-right">
 	<c:if test="${!empty user && !empty user.photoname}">
 	<img src="${pageContext.request.contextPath}/member/photoView.do" width="25" height="25" class="my-photo">
@@ -18,7 +17,17 @@
 	<a href="${pageContext.request.contextPath}/member/registerUser.do">회원가입</a>
 	<a href="${pageContext.request.contextPath}/member/login.do">로그인</a>	
 	</c:if>
-	<a href="${pageContext.request.contextPath}/main/main.do">홈으로</a>
+</div>
+<div>
+	<img id="header_logo" src="${pageContext.request.contextPath}/resources/images/xteam_logo.png" width="250" height="113" alt="xteam로고 이미지">
+	<h1 class="align-center">XTEAM 온라인 게임 유통 플랫폼	</h1>
+</div>
+<div id="header_menu" class="align-center">
+	<a href="${pageContext.request.contextPath}/board/main.do">홈으로</a>
+	<a href="${pageContext.request.contextPath}/board/list.do">상점</a>
+	<a href="${pageContext.request.contextPath}/board/list.do">커뮤니티</a>
+	<a href="${pageContext.request.contextPath}/board/list.do">정보</a>
+	<a href="${pageContext.request.contextPath}/board/list.do">고객지원</a>
 </div>
 
 

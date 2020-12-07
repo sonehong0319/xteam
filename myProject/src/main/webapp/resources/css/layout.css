@@ -1,15 +1,21 @@
 @CHARSET "UTF-8";
-
+@import url(header_style.css);
+@import url(left_style.css);
+@import url(body_style.css);
+@import url(footer_style.css);
+@import url(main_style.css);
 /*=========레이아웃=========*/
 div#main{
-	width:1024px;
+	width:1400px;
 	margin:0 auto;
 	font-size:10pt;
 	font-family: "맑은 고딕";
+	
 }
 div#main_header{
 	margin-bottom: 10px;
 	padding: 0 10px 0 0;
+	
 }
 div#main_menu{
 	float:left;
@@ -24,7 +30,6 @@ div#main_body{
 div#main_footer{
 	clear:both;
 	width:100%;
-	background-color:yellow;
 }
 
 /*==========메뉴==========*/
@@ -55,9 +60,13 @@ div#main_menu ul li{
 }
 .align-center{
 	text-align:center;
+	
 }
 .align-right{
 	text-align:right;
+}
+a{
+	text-decoration: none;
 }
 .error-color{
 	color:#ff0000;
