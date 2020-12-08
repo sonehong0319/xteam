@@ -197,7 +197,7 @@ label{
 input[type="text"],input[type="password"],input[type="email"]{
 	width:200px;
 }
-#register_form input[id="id"]{
+#register_form input[meme_id="mem_id"]{
 	width:113px;
 }
 input[id="zipcode"]{

@@ -2,14 +2,14 @@
     pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <div class="align-right">
-	<c:if test="${!empty user && !empty user.photoname}">
+	<c:if test="${!empty user && !empty user.mem_photoname}">
 	<img src="${pageContext.request.contextPath}/member/photoView.do" width="25" height="25" class="my-photo">
 	</c:if>
-	<c:if test="${!empty user && empty user.photoname}">
+	<c:if test="${!empty user && empty user.mem_photoname}">
 	<img src="${pageContext.request.contextPath}/resources/images/blank.jpg" width="25" height="25" class="my-photo">
 	</c:if>
 	<c:if test="${!empty user}">
-	[<span>${user.id}</span>]
+	[<span>${user.mem_id}</span>]
 	<a href="${pageContext.request.contextPath}/member/logout.do">로그아웃</a>
 	<a href="${pageContext.request.contextPath}/member/myPage.do">MY페이지</a>
 	</c:if>
@@ -23,7 +23,7 @@
 	<h1 class="align-center">XTEAM 온라인 게임 유통 플랫폼	</h1>
 </div>
 <div id="header_menu" class="align-center">
-	<a href="${pageContext.request.contextPath}/board/main.do">홈으로</a>
+	<a href="${pageContext.request.contextPath}/main/main.do">홈으로</a>	
 	<a href="${pageContext.request.contextPath}/board/list.do">상점</a>
 	<a href="${pageContext.request.contextPath}/board/list.do">커뮤니티</a>
 	<a href="${pageContext.request.contextPath}/board/list.do">정보</a>
