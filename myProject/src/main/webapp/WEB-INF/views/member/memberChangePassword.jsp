@@ -5,7 +5,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		//비밀번호 변경 체크
-		$('#passwd').keyup(function(){
+		$('#mem_passwd').keyup(function(){
 			if($('#confirm_passwd').val()!='' &&
 					 $('#confirm_passwd').val()!=$(this).val()){
 				$('#message_id').text('비밀번호 불일치').css('color','red');
@@ -16,11 +16,11 @@
 		});
 		
 		$('#confirm_passwd').keyup(function(){
-			if($('#passwd').val()!='' &&
-					 $('#passwd').val()!=$(this).val()){
+			if($('#mem_passwd').val()!='' &&
+					 $('#mem_passwd').val()!=$(this).val()){
 				$('#message_id').text('비밀번호 불일치').css('color','red');
-			}else if($('#passwd').val()!='' &&
-					$('#passwd').val()==$(this).val()){
+			}else if($('#mem_passwd').val()!='' &&
+					$('#mem_passwd').val()==$(this).val()){
 				$('#message_id').text('비밀번호 일치').css('color','#000');
 			}
 		});
@@ -31,9 +31,9 @@
 				$('#now_passwd').focus();
 				return false;
 			}
-			if($('#passwd').val()==''){
+			if($('#mem_passwd').val()==''){
 				alert('변경 비밀번호를 입력하세요');
-				$('#passwd').focus();
+				$('#mem_passwd').focus();
 				return false;
 			}
 			if($('#confirm_passwd').val()==''){
@@ -41,7 +41,7 @@
 				$('#confirm_passwd').focus();
 				return false;
 			}
-			if($('#passwd').val()!=$('#confirm_passwd').val()){
+			if($('#mem_passwd').val()!=$('#confirm_passwd').val()){
 				alert('변경 비밀번호와 변경 비밀번호 확인 불일치');
 				return false;
 			}
@@ -59,9 +59,9 @@
 				<form:errors path="now_passwd" cssClass="error-color"/>
 			</li>
 			<li>
-				<label for="passwd">변경할 비밀번호</label>
-				<form:password path="passwd"/>
-				<form:errors path="passwd" cssClass="error-color"/>
+				<label for="mem_passwd">변경할 비밀번호</label>
+				<form:password path="mem_passwd"/>
+				<form:errors path="mem_passwd" cssClass="error-color"/>
 			</li>
 			<li>
 				<label for="confirm_passwd">변경할 비밀번호 확인</label>

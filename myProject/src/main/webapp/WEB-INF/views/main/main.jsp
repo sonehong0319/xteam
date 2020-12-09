@@ -1,13 +1,43 @@
 	<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" %>
 <div id="main_div">
-	<div>
+	<div id="main_swiper">
 		<h2>특집 및 추천 제품</h2>
-		<div>
-		<a href="#"><img src="${pageContext.request.contextPath}/resources/images/testimage1.jpg" width="900px"></a>
-		<a></a>
-		<a></a>
-		</div>
+		 <!-- Swiper -->
+			<div class="swiper-container">
+   				<div class="swiper-wrapper">
+    			  <div class="swiper-slide"><a href="#"><img src="${pageContext.request.contextPath}/resources/images/swiper1.jpg" width="900px"></a></div>
+    			  <div class="swiper-slide"><a href="#"><img src="${pageContext.request.contextPath}/resources/images/swiper3.jpg" width="900px"></a></div>
+				  <div class="swiper-slide"><a href="#"><img src="${pageContext.request.contextPath}/resources/images/swiper2.jpg" width="900px"></a></div>
+   				</div>
+    			<!-- Add Pagination -->
+   				<div class="swiper-pagination"></div>
+    			<!-- Add Arrows -->
+    			<div class="swiper-button-next"></div>
+    			<div class="swiper-button-prev"></div>
+  			</div>
+  <!-- Swiper JS -->
+  <script src="${pageContext.request.contextPath}/resources/js/swiper.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+	  autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 	</div>
 	<div>
 		<h2>특별 할인</h2>

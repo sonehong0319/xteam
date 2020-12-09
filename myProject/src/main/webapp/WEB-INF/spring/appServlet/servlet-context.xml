@@ -29,7 +29,8 @@
 	               base-package="kr.spring.member.controller" />
 	<context:component-scan 
 	               base-package="kr.spring.board.controller"/>               
-	
+	<context:component-scan 
+	               base-package="kr.spring.game.controller"/>  
 	<!-- tiles 설정 -->
 	<beans:bean id="tilesConfigurer"
 	 class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
@@ -38,6 +39,7 @@
 				<beans:value>/WEB-INF/tiles-def/main.xml</beans:value>
 				<beans:value>/WEB-INF/tiles-def/member.xml</beans:value>
 				<beans:value>/WEB-INF/tiles-def/board.xml</beans:value>
+				<beans:value>/WEB-INF/tiles-def/gameList.xml</beans:value>
 			</beans:list>
 		</beans:property>
 	</beans:bean>

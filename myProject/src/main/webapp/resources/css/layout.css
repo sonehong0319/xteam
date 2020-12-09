@@ -4,6 +4,7 @@
 @import url(body_style.css);
 @import url(footer_style.css);
 @import url(main_style.css);
+@import url(swiper.css);
 /*=========레이아웃=========*/
 div#main{
 	width:1400px;
