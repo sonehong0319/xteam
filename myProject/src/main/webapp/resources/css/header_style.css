@@ -1,0 +1,11 @@
+/* header_style.css */
+#header_logo{
+	position: absolute;
+	margin-left: 30px;
+	margin-top: -32px;
+}
+#header_menu{
+}
+#header_menu a {
+	margin: 5px;
+}

@@ -1,0 +1,11 @@
+/* main_style.css */
+#main_div > div{
+	margin-bottom: 60px;
+}
+#main_div2{
+	display: flex;
+	width: 920px;
+}
+#main_div2 div{
+	margin-right: 5px;
+}

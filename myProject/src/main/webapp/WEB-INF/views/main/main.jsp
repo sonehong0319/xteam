@@ -38,6 +38,6 @@
 	<div class="align-center">
 		<h3>추천 제품들을 찾고 계십니까?</h3>
 		<p>맞춤 추천 제품을 보려면 로그인하세요.</p>
-		<p>아직 가입하지 않으셨다면 먼저 <strong><a href="#">가입</a></strong>하신 후 무료로 Xteam을 이용하세요.</p>
+		<p>아직 가입하지 않으셨다면 먼저 <strong><a href="${pageContext.request.contextPath}/member/registerUser.do">가입</a></strong>하신 후 무료로 Xteam을 이용하세요.</p>
 	</div>
 </div>
