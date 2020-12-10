@@ -19,14 +19,13 @@ public class GameServiceImpl implements GameService{
 	
 	@Override
 	public List<GameVO> selectList(Map<String, Object> map) {
-		// TODO Auto-generated method stub
-		return null;
+		return gameMapper.selectList(map);
 	}
 
 	@Override
 	public int selectRowCount(Map<String, Object> map) {
 		// TODO Auto-generated method stub
-		return 0;
+		return gameMapper.selectRowCount(map);
 	}
 
 	@Override
@@ -35,9 +34,8 @@ public class GameServiceImpl implements GameService{
 	}
 
 	@Override
-	public BoardVO selectGame(Integer gam_num) {
-		// TODO Auto-generated method stub
-		return null;
+	public GameVO selectGame(Integer gam_num) {
+		return gameMapper.selectGame(gam_num);
 	}
 
 	@Override
@@ -56,6 +54,16 @@ public class GameServiceImpl implements GameService{
 	public void deleteGame(Integer gam_num) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public List<GameVO> selectListCate(Map<String, Object> map) {
+		return gameMapper.selectListCate(map);
+	}
+
+	@Override
+	public int selectRowCountCate(Map<String, Object> map) {
+		return gameMapper.selectRowCountCate(map);
 	}
 
 	

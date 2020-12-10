@@ -48,12 +48,6 @@
 				<input type="file" name="upload" id="upload"
 				                     accept="image/gif,image/png,image/jpeg">
 			</div>
-			<div>
-				<label for="gam_">내용</label><br>
-				<form:textarea path="gam_detail"/>
-				<form:errors path="gam_detail" cssClass="error-color"/>
-			</div>
-
 		<div class="align-center">
 			<input type="submit" value="전송">
 			<input type="button" value="목록"

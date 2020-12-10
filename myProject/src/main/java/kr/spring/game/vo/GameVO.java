@@ -6,13 +6,14 @@ import java.util.Arrays;
 
 import javax.validation.constraints.NotEmpty;
 
+import org.hibernate.validator.constraints.Range;
 import org.springframework.web.multipart.MultipartFile;
 
 public class GameVO {
 	private int gam_num; //게임 번호
 	@NotEmpty
 	private String gam_name; //게임 이름
-	@NotEmpty
+	@Range(min=1,max=9999999)
 	private int gam_price; //게임 가격
 	private Date gam_date; //게임 출시일
 	private int gam_hit; //게임 판매 수
@@ -128,10 +129,8 @@ public class GameVO {
 	@Override
 	public String toString() {
 		return "GameVO [gam_num=" + gam_num + ", gam_name=" + gam_name + ", gam_price=" + gam_price + ", gam_date="
-				+ gam_date + ", gam_hit=" + gam_hit + ", gam_detail=" + gam_detail + ", gam_uploadfile="
-				+ Arrays.toString(gam_uploadfile) + ", cate_num=" + cate_num + "]";
+				+ gam_date + ", gam_hit=" + gam_hit + ", gam_detail=" + gam_detail + ", cate_num=" + cate_num + "]";
 	}
-	
 	
 }
 	

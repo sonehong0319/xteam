@@ -27,16 +27,16 @@ import kr.spring.util.PagingUtil;
 @Controller
 public class GameController {
 	private Logger log = Logger.getLogger(this.getClass());
-	
+
 	@Resource
 	private GameService gameService;
-	
+
 	//자바빈(VO) 초기화
 	@ModelAttribute
 	public GameVO initCommand() {
 		return new GameVO();
 	}
-	
+
 	@RequestMapping("/game/gameList.do")
 	public ModelAndView process(
 			@RequestParam(value="pageNum",defaultValue="1")
@@ -45,68 +45,119 @@ public class GameController {
 			String keyfield,
 			@RequestParam(value="keyword",defaultValue="")
 			String keyword) {
-		
+
 		Map<String,Object> map = 
 				new HashMap<String,Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
-		
+
 		//총 글의 갯수 또는 검색된 글의 갯수
-		//int count = boardService.selectRowCount(map);
-		
+		int count = gameService.selectRowCount(map);
+
 		if(log.isDebugEnabled()) {
-		//	log.debug("<<count>> : " + count);
+			log.debug("<<count>> : " + count);
 		}
-		
-		//PagingUtil page = new PagingUtil(keyfield,keyword,currentPage,count,10,10,"list.do");
-		//map.put("start", page.getStartCount());
-		//map.put("end", page.getEndCount());
-		
-		List<BoardVO> list = null;
-		//if(count > 0) {
-		//	list = boardService.selectList(map);
-			
-		//	if(log.isDebugEnabled()) {
-		//		log.debug("<<글 목록>> : " + list);
-		//	}
-		//}
-		
+
+		PagingUtil page = new PagingUtil(keyfield,keyword,currentPage,count,10,10,"gameList.do");
+		map.put("start", page.getStartCount());
+		map.put("end", page.getEndCount());
+
+		List<GameVO> list = null;
+		if(count > 0) {
+			list = gameService.selectList(map);
+
+			if(log.isDebugEnabled()) {
+				log.debug("<<글 목록>> : " + list);
+			}
+		}
+
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("gameList");
-		//mav.addObject("count",count);
-		//mav.addObject("list", list);
-		//mav.addObject("pagingHtml", page.getPagingHtml());
-		
+		mav.addObject("count",count);
+		mav.addObject("list", list);
+		mav.addObject("pagingHtml", page.getPagingHtml());
+
 		return mav;
 	}
-	
+
 	//회원가입 폼 
 	@RequestMapping(value="/game/write.do",method=RequestMethod.GET)
 	public String form() {
 		return "gameWrite";
 	}
-	
+
 	@RequestMapping(value="/game/write.do",method=RequestMethod.POST)
 	public String submit(@Valid GameVO gameVO,
-			             BindingResult result,
-			             HttpServletRequest request,
-			             HttpSession session) {
-		
+			BindingResult result,
+			HttpServletRequest request,
+			HttpSession session) {
+
 		if(log.isDebugEnabled()) {
 			log.debug("<<게시판 글 저장>> : " + gameVO);
 		}
-		
+
 		//유효성 체크 결과 오류가 있으면 폼 호출
 		if(result.hasErrors()) {
 			return "gameWrite";
 		}
-		
+
 		//글쓰기
 		gameService.insertGame(gameVO);
-		
-		return "redirect:/board/list.do";
+
+		return "redirect:/game/gameList.do";
 	}
-	
+	//이미지 출력
+	@RequestMapping("/game/imageView.do")
+	public ModelAndView viewImage(@RequestParam int gam_num) {
+
+		GameVO game = gameService.selectGame(gam_num);
+
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("imageView");
+		//byte[]타입의 데이터
+		mav.addObject("imageFile", game.getGam_uploadfile());
+		mav.addObject("filename", "game.jpg");
+
+		return mav;
+	}
+	@RequestMapping("/game/gameListCate.do")
+	public ModelAndView processCate(
+			@RequestParam(value="pageNum",defaultValue="1")
+			int currentPage,
+			@RequestParam int cate_num) {
+
+		Map<String,Object> map = 
+				new HashMap<String,Object>();
+		map.put("cate_num", cate_num);
+
+		//총 글의 갯수 또는 검색된 글의 갯수
+		int count = gameService.selectRowCountCate(map);
+
+		if(log.isDebugEnabled()) {
+			log.debug("<<count>> : " + count);
+		}
+
+		PagingUtil page = new PagingUtil(currentPage,count,10,10,"gameList.do","&cate_num"+cate_num);
+		map.put("start", page.getStartCount());
+		map.put("end", page.getEndCount());
+
+		List<GameVO> list = null;
+		if(count > 0) {
+			list = gameService.selectListCate(map);
+
+			if(log.isDebugEnabled()) {
+				log.debug("<<글 목록>> : " + list);
+			}
+		}
+
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("gameList");
+		mav.addObject("count",count);
+		mav.addObject("list", list);
+		mav.addObject("pagingHtml", page.getPagingHtml());
+
+		return mav;
+	}
 }
 
 
