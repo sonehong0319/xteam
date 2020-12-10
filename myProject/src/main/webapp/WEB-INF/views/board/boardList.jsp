@@ -2,7 +2,7 @@
     pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <div class="page-main-style">
-	<h2>게시판 목록</h2>
+	<h2>커뮤니티 목록</h2>
 	<form action="list.do" id="search_form" method="get">
 		<ul class="search">
 			<li>
