@@ -15,7 +15,7 @@
 
 </style>  
 <div class="page-main-style">
-	<h2>상점</h2>
+	<h2>게임 상점</h2>
 	<div class="align-right">
 		<c:if test="${!empty user}">
 		<input type="button" value="게임등록" 
