@@ -26,6 +26,7 @@ create table games(
   gam_date date,
   gam_hit number,
   gam_detail clob not null,
+  gam_uploadfile blob,
   cate_num number,
   constraint games_pk primary key (gam_num),
   constraint games_fk foreign key (cate_num) references category (cate_num)

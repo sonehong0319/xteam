@@ -39,7 +39,7 @@
 				<beans:value>/WEB-INF/tiles-def/main.xml</beans:value>
 				<beans:value>/WEB-INF/tiles-def/member.xml</beans:value>
 				<beans:value>/WEB-INF/tiles-def/board.xml</beans:value>
-				<beans:value>/WEB-INF/tiles-def/gameList.xml</beans:value>
+				<beans:value>/WEB-INF/tiles-def/game.xml</beans:value>
 			</beans:list>
 		</beans:property>
 	</beans:bean>

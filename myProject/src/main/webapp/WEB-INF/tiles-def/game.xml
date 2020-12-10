@@ -5,9 +5,9 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
        
 <tiles-definitions>
-    <definition name="gameList" extends="main">
+    <definition name="game" extends="main">
     	<put-attribute name="title" value="상점"/>
-    	<put-attribute name="body" value="/WEB-INF/views/game/gameList.jsp"/>  
+    	<put-attribute name="body" value="/WEB-INF/views/game/game.jsp"/>  
     </definition>
     
 </tiles-definitions>

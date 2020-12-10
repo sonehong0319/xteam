@@ -24,7 +24,7 @@
 </div>
 <div id="header_menu" class="align-center">
 	<a href="${pageContext.request.contextPath}/main/main.do">홈으로</a>	
-	<a href="${pageContext.request.contextPath}/game/gameList.do">상점</a>
+	<a href="${pageContext.request.contextPath}/game/game.do">상점</a>
 	<a href="${pageContext.request.contextPath}/board/list.do">커뮤니티</a>
 	<a href="${pageContext.request.contextPath}/board/list.do">정보</a>
 	<a href="${pageContext.request.contextPath}/board/list.do">고객지원</a>
