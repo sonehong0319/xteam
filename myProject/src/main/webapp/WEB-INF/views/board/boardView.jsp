@@ -1,27 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
-<div style="margin-right:5%;">
-	<div
-	style="
-	background-color:#EEEEEE; 
-	height:30px; 
-	border-bottom:1px solid gray; 
-	border-top:1px solid gray;
-	text-align: center;">
-		<span style="margin:30px 180px 30px 30px;">${board.id}</span>
-		<span style="margin:30px 180px 30px 30px;">${board.board_reg_date}</span>
-		조회 : ${board.board_hit}
-	</div>
-	
-	<p style="color:darkred; font-size:18px; padding-top:50px; padding-bottom:50px;">${board.board_title}</p>
+<div class="page-main-style">
+	<div id="boardview-style">
+		<span>${board.mem_id}</span>
+		<span>${board.board_reg_date}</span>
+		<span>${board.board_hit}</span>
+	</div><br><br>
+	<h2>${board.board_title}</h2>
 	<c:if test="${!empty board.board_filename}">
 	<div class="align-center">
 		<img src="imageView.do?board_num=${board.board_num}" style="max-width:500px;">
 	</div>
 	</c:if>
-	<p style="height:200px; padding-top: 50px;">
-		${board.board_content}
+	<p>
+		<br><br><br><br>${board.board_content}<br><br><br><br>
 	</p>
 	<hr size="1" width="100%">
 	<div class="align-right">
@@ -42,13 +35,9 @@
 			};
 		</script>              
 		</c:if>
-		<input type="button" value="목록" onclick="location.href='list.do'">
+		<input type="button" value="목록"
+		       onclick="location.href='list.do'">
 	</div>
-
-	<!-- 댓글 -->
-
-
-
 </div>
 
 

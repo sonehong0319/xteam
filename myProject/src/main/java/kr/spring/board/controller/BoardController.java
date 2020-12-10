@@ -135,8 +135,8 @@ public class BoardController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("imageView");
 		                            //byte[]타입의 데이터
-		mav.addObject("imageFile", board.getboard_Uploadfile());
-		mav.addObject("filename", board.getboard_Filename());
+		mav.addObject("imageFile", board.getBoard_uploadfile());
+		mav.addObject("filename", board.getBoard_filename());
 		
 		return mav;
 	}

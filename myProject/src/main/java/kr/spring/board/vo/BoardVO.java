@@ -19,81 +19,100 @@ public class BoardVO {
 	private byte[] board_uploadfile;//이미지 파일
 	private String board_filename;//파일명
 	private int mem_num;//회원 번호
-	private String id;//회원 아이디
+	private String mem_id;//회원 아이디
 	
 	//이미지 업로드 파일 처리
 	public void setUpload(MultipartFile upload)throws IOException{
 		//MultipartFile -> byte[] 반환
-		setboard_Uploadfile(upload.getBytes());
+		setBoard_uploadfile(upload.getBytes());
 		//파일명 구하기
-		setboard_Filename(upload.getOriginalFilename());
+		setBoard_filename(upload.getOriginalFilename());
 	}
 	
 	public int getBoard_num() {
 		return board_num;
 	}
+
 	public void setBoard_num(int board_num) {
 		this.board_num = board_num;
 	}
-	public String getboard_Title() {
+
+	public String getBoard_title() {
 		return board_title;
 	}
-	public void setboard_Title(String board_title) {
+
+	public void setBoard_title(String board_title) {
 		this.board_title = board_title;
 	}
-	public String getboard_Content() {
+
+	public String getBoard_content() {
 		return board_content;
 	}
-	public void setboard_Content(String board_content) {
+
+	public void setBoard_content(String board_content) {
 		this.board_content = board_content;
 	}
-	public int getboard_Hit() {
+
+	public int getBoard_hit() {
 		return board_hit;
 	}
-	public void setboard_Hit(int board_hit) {
+
+	public void setBoard_hit(int board_hit) {
 		this.board_hit = board_hit;
 	}
-	public Date getboard_Reg_date() {
+
+	public Date getBoard_reg_date() {
 		return board_reg_date;
 	}
-	public void setboard_Reg_date(Date board_reg_date) {
+
+	public void setBoard_reg_date(Date board_reg_date) {
 		this.board_reg_date = board_reg_date;
 	}
-	public Date getboard_Modify_date() {
+
+	public Date getBoard_modify_date() {
 		return board_modify_date;
 	}
-	public void setboard_Modify_date(Date board_modify_date) {
+
+	public void setBoard_modify_date(Date board_modify_date) {
 		this.board_modify_date = board_modify_date;
 	}
-	public byte[] getboard_Uploadfile() {
+
+	public byte[] getBoard_uploadfile() {
 		return board_uploadfile;
 	}
-	public void setboard_Uploadfile(byte[] board_uploadfile) {
+
+	public void setBoard_uploadfile(byte[] board_uploadfile) {
 		this.board_uploadfile = board_uploadfile;
 	}
-	public String getboard_Filename() {
+
+	public String getBoard_filename() {
 		return board_filename;
 	}
-	public void setboard_Filename(String board_filename) {
+
+	public void setBoard_filename(String board_filename) {
 		this.board_filename = board_filename;
 	}
+
 	public int getMem_num() {
 		return mem_num;
 	}
+
 	public void setMem_num(int mem_num) {
 		this.mem_num = mem_num;
 	}
-	public String getId() {
-		return id;
+
+	public String getMem_id() {
+		return mem_id;
 	}
-	public void setId(String id) {
-		this.id = id;
+
+	public void setMem_id(String mem_id) {
+		this.mem_id = mem_id;
 	}
 
 	@Override
 	public String toString() {
 		return "BoardVO [board_num=" + board_num + ", board_title=" + board_title + ", board_content=" + board_content + ", board_hit=" + board_hit
-				+ ", board_reg_date=" + board_reg_date + ", board_modify_date=" + board_modify_date + ", board_filename=" + board_filename + ", mem_num=" + mem_num + ", id=" + id + "]";
+				+ ", board_reg_date=" + board_reg_date + ", board_modify_date=" + board_modify_date + ", board_filename=" + board_filename + ", mem_num=" + mem_num + ", mem_id=" + mem_id + "]";
 	}
 
 }

@@ -12,3 +12,25 @@
 #main_swiper{
 	width: 900px;
 }
+
+
+/*board수정*/
+#boardview-style{
+	background-color:#EEEEEE;
+	height:30px;
+	text-align:center;
+	border-top:2px solid gray;
+	word-spacing:300px;
+	}
+#test{
+	border:2px solid red;
+}
+#bordwrite-title{
+	background-color:#EEEEEE;
+	border-top:2px solid gray;
+}
+textarea{
+	width:800px; 
+	height:500px; 
+    resize:none;
+}
