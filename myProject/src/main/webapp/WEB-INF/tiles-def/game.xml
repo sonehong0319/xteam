@@ -5,9 +5,12 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
        
 <tiles-definitions>
-    <definition name="game" extends="main">
-    	<put-attribute name="title" value="상점"/>
-    	<put-attribute name="body" value="/WEB-INF/views/game/game.jsp"/>  
+<definition name="gameList" extends="main">
+    	<put-attribute name="title" value="게임등록"/>
+    	<put-attribute name="body" value="/WEB-INF/views/game/gameList.jsp"/>  
     </definition>
-    
+    <definition name="gameWrite" extends="main">
+    	<put-attribute name="title" value="게임등록"/>
+    	<put-attribute name="body" value="/WEB-INF/views/game/gameWrite.jsp"/>  
+    </definition>
 </tiles-definitions>

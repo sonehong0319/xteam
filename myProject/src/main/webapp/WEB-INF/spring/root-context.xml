@@ -66,11 +66,13 @@
 	      class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
 		<property name="typeAliasesPackage" value="kr.spring.member.vo,
-		                                           kr.spring.board.vo"/>	
+		                                           kr.spring.board.vo,
+		                                           kr.spring.game.vo"/>	
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="kr.spring.member.dao,
-		                                    kr.spring.board.dao"/>
+		                                    kr.spring.board.dao,
+		                                    kr.spring.game.dao"/>
 	</bean>
 	
 </beans>
