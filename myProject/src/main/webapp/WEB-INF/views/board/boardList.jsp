@@ -13,7 +13,7 @@
 					<option value="4">전체</option>
 				</select>
 			</li>
-			<li>
+			<li> 
 				<input type="text" name="keyword" id="keyword">
 			</li>
 			<li>

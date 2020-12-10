@@ -25,7 +25,7 @@ public class BoardServiceImpl implements BoardService{
 	public int selectRowCount(Map<String, Object> map) {
 		return boardMapper.selectRowCount(map);
 	}
-
+  
 	@Override
 	public void insertBoard(BoardVO board) {
 		boardMapper.insertBoard(board);

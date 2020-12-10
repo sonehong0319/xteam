@@ -15,7 +15,7 @@
 	</c:if>
 	<p>
 		<br><br><br><br>${board.board_content}<br><br><br><br>
-	</p>
+	</p> 
 	<hr size="1" width="100%">
 	<div class="align-right">
 	    <%--수정 삭제의 경우는 로그인이 되어있고 로그인한 회원번호와 작성자 회원번호가

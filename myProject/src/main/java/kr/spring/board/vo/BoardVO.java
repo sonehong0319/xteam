@@ -20,7 +20,7 @@ public class BoardVO {
 	private String board_filename;//파일명
 	private int mem_num;//회원 번호
 	private String mem_id;//회원 아이디
-	
+	  
 	//이미지 업로드 파일 처리
 	public void setUpload(MultipartFile upload)throws IOException{
 		//MultipartFile -> byte[] 반환

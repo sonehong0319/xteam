@@ -125,7 +125,7 @@ public class BoardController {
 		
 		return new ModelAndView("boardView","board",board);
 	}
-	
+	  
 	//이미지 출력
 	@RequestMapping("/board/imageView.do")
 	public ModelAndView viewImage(@RequestParam int board_num) {

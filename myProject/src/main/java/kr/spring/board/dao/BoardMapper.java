@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import kr.spring.board.vo.BoardVO;
-
+  
 public interface BoardMapper {
 	public List<BoardVO> selectList(Map<String,Object> map);
 	public int selectRowCount(Map<String,Object> map);
@@ -22,7 +22,7 @@ public interface BoardMapper {
 	public void updateBoard(BoardVO board);
 	@Delete("DELETE FROM board WHERE board_num=#{board_num}")
 	public void deleteBoard(Integer board_num);
-	
+	  
 }
 
 

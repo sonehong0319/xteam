@@ -27,7 +27,7 @@
 	 	FROM board b JOIN member m
 	 	ON b.mem_num = m.mem_num                               
 	 </select>
-	 
+	   
 	 <update id="updateBoard" parameterType="boardVO">
 	 	UPDATE board SET
 	 	  <if test="filename!=''">

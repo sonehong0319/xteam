@@ -16,7 +16,7 @@
 				<form:textarea path="board_content"/>
 				<form:errors path="board_content" cssClass="error-color"/>
 			</div>
-			<div>
+			<div> 
 				<label for="upload">이미지 파일업로드</label>
 				<input type="file" name="upload" id="upload"
 				                     accept="image/gif,image/png,image/jpeg">
