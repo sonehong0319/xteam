@@ -15,10 +15,20 @@
 	</div>
 	<div class="game_price">
 		가격 : ${game.gam_price} 원 
-		<input type="button" value="구매 하기" onclick="location.href='list.do'" > 
+		<form action="${pageContext.request.contextPath}/purchase/purchase.do" method="post" id="purchase_form" style="border:none;">
+		<input type="hidden" name="gam_num" value="${game.gam_num}">
+		<input type="submit" value="구매 하기" id="purchase_btn" > 
+		</form>
 	</div>
-
-
+	<script>
+		var form = document.getElementById('purchase_form');
+		form.onsubmit=function(){
+			var choice = window.confirm('${game.gam_name} 를 구매 하시겠습니까?');
+            if(!choice){
+               return false;
+            }
+		};
+      </script>
 </div>
 
 

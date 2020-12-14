@@ -112,6 +112,9 @@
 	<div>
 	</div>
 	<h2>구매 목록</h2>
+		<div>
+			${purchase.pur_num}
+		</div>
 	<div>
 		
 	</div>

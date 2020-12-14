@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="kr.spring.purchase.dao.PurchaseMapper">  
+	 <select id="selectList" parameterType="map"
+	                               resultType="purchaseVO">
+	 	SELECT
+	 	  *
+	 	FROM (SELECT
+	 	         a.*,
+	 	         rownum rnum
+	 	      FROM (SELECT 
+	 	              *
+	 	            FROM purchase p JOIN member m
+	 	            ON p.mem_num=m.mem_num
+	 	            ORDER BY p.pur_num DESC)a)
+	 <![CDATA[
+	 	WHERE rnum >= #{start} AND rnum <= #{end}
+	 ]]>	            
+	 </select>
+	 
+	 <select id="selectRowCount" parameterType="map"
+	                                resultType="integer">
+	 	SELECT
+	 	   COUNT(*)
+	 	FROM purchase JOIN member m
+	 	ON p.mem_num = m.mem_num                               
+	 </select>
+	   
+	 <update id="updatePurchase" parameterType="purchaseVO">
+	 	UPDATE purchase SET
+	 	  <if test="filename!=''">
+	 	  	board_uploadfile=#{board_vuploadfile},
+	 	  	board_filename=#{board_filename},
+	 	  </if>
+	 	  board_title=#{board_title},
+	 	  board_content=#{board_content},
+	 	  board_modify_date=SYSDATE
+	   WHERE board_num=#{board_num}	  
+	 </update>
+ 	
+</mapper>
+
+
+
+
+
+
+
