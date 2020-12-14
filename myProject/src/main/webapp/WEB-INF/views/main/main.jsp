@@ -6,9 +6,9 @@
 		 <!-- Swiper -->
 			<div class="swiper-container">
    				<div class="swiper-wrapper">
-    			  <div class="swiper-slide"><a href="#"><img src="${pageContext.request.contextPath}/resources/images/swiper1.jpg" width="900px"></a></div>
-    			  <div class="swiper-slide"><a href="#"><img src="${pageContext.request.contextPath}/resources/images/swiper3.jpg" width="900px"></a></div>
-				  <div class="swiper-slide"><a href="#"><img src="${pageContext.request.contextPath}/resources/images/swiper2.jpg" width="900px"></a></div>
+    			  <div class="swiper-slide"><a href="${pageContext.request.contextPath}/game/gameDetail.do?gam_num=1"><img src="${pageContext.request.contextPath}/resources/images/swiper1.jpg" width="900px"></a></div>
+    			  <div class="swiper-slide"><a href="${pageContext.request.contextPath}/game/gameDetail.do?gam_num=2"><img src="${pageContext.request.contextPath}/resources/images/swiper3.jpg" width="900px"></a></div>
+				  <div class="swiper-slide"><a href="${pageContext.request.contextPath}/game/gameDetail.do?gam_num=3"><img src="${pageContext.request.contextPath}/resources/images/swiper2.jpg" width="900px"></a></div>
    				</div>
     			<!-- Add Pagination -->
    				<div class="swiper-pagination"></div>
@@ -43,19 +43,19 @@
 		<h2>특별 할인</h2>
 		<div id="main_div2">
 			<div>
-				<a><img src="${pageContext.request.contextPath}/resources/images/test3.jpg"
+				<a href="${pageContext.request.contextPath}/game/gameDetail.do?gam_num=4"><img src="${pageContext.request.contextPath}/resources/images/test3.jpg"
 				 width="300px" height="350px"></a><br>
 				<strong>기간 특가</strong><br>
 				할인 혜택은 2020년 12월 30일에 종료됩니다.
 			</div>
 			<div>
-				<a><img src="${pageContext.request.contextPath}/resources/images/test4.jpg"
+				<a href="${pageContext.request.contextPath}/game/gameDetail.do?gam_num=5"><img src="${pageContext.request.contextPath}/resources/images/test4.jpg"
 				 width="300px" height="350px"></a><br>
 				<strong>오늘의 특가</strong><br>
 				할인 혜택은 금일 오후 12시까지 입니다.
 			</div>
 			<div>
-				<a><img src="${pageContext.request.contextPath}/resources/images/test5.jpg"
+				<a href="${pageContext.request.contextPath}/game/gameDetail.do?gam_num=6"><img src="${pageContext.request.contextPath}/resources/images/test5.jpg"
 				 width="300px" height="350px"></a><br>
 				<strong>주말 특가</strong><br>
 				할인 혜택은 태평양 시간을 기준으로 월요일 오전 10시까지 입니다.

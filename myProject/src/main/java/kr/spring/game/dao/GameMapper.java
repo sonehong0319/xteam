@@ -14,7 +14,7 @@ public interface GameMapper {
 	public int selectRowCount(Map<String,Object> map);
 	public List<GameVO> selectListCate(Map<String,Object> map);
 	public int selectRowCountCate(Map<String,Object> map);
-	@Insert("INSERT INTO games (gam_num, gam_name, gam_price, gam_date, gam_hit, gam_detail, cate_num, gam_uploadfile) VALUES (games_seq.nextval,#{gam_name},#{gam_price}, #{gam_date}, #{gam_hit}, #{gam_detail}, #{cate_num}, #{gam_uploadfile})")
+	@Insert("INSERT INTO games (gam_num, gam_name, gam_price, gam_date, gam_hit, gam_detail, cate_num, gam_uploadfile) VALUES (games_seq.nextval,#{gam_name},#{gam_price}, #{gam_date}, #{gam_hit}, #{gam_detail}, #{cate_num}, #{gam_uploadfile}")
 	public void insertGame(GameVO game);
 	@Select("SELECT * FROM games WHERE gam_num=#{gam_num}")
 	public GameVO selectGame(Integer gam_num);

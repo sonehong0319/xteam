@@ -6,11 +6,15 @@
        
 <tiles-definitions>
 <definition name="gameList" extends="main">
-    	<put-attribute name="title" value="게임등록"/>
+    	<put-attribute name="title" value="게임리스트"/>
     	<put-attribute name="body" value="/WEB-INF/views/game/gameList.jsp"/>  
     </definition>
     <definition name="gameWrite" extends="main">
     	<put-attribute name="title" value="게임등록"/>
     	<put-attribute name="body" value="/WEB-INF/views/game/gameWrite.jsp"/>  
+    </definition>
+    <definition name="gameView" extends="main">
+    	<put-attribute name="title" value="게임 상세 정보"/>
+    	<put-attribute name="body" value="/WEB-INF/views/game/gameView.jsp"/>  
     </definition>
 </tiles-definitions>

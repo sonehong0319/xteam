@@ -15,22 +15,69 @@
 
 
 /*board수정*/
-#boardview-style{
-	background-color:#EEEEEE;
-	height:30px;
-	text-align:center;
-	border-top:2px solid gray;
-	word-spacing:300px;
-	}
-#test{
-	border:2px solid red;
+.boardhead-style{
+   background-color:#EEEEEE;
+   height:30px;
+   text-align:center;
+   border-top:2px solid gray;
+   word-spacing:300px;
+   line-height: 20px;
+   }
+.bordwrite-title{
+   background-color:#EEEEEE;
+   height:30px;
+   border-top:2px solid gray;
 }
-#bordwrite-title{
-	background-color:#EEEEEE;
-	border-top:2px solid gray;
+.boardwrite-writer{
+   background-color:#FAFAFA;
+   height:30px;
+}
+.boardwrite-submit{
+   text-align:center;
+   background-color:#EEEEEE;
+   height:30px;
+   border-bottom:2px solid gray;
+}
+#boardlist-head{
+   background-color:#EEEEEE;
+   height:30px;
+   border-top:2px solid gray;
+   border-bottom:1px solid gray;
+   text-align: center;
+}
+#boardlist-content{
+   border-bottom:1px solid gray;
+   height:25px;
+}
+.boardcount_1{
+   width:8%;
+   float:left;
+   text-align: center;
+}
+.boardtitle_1{
+   width:50%;
+   float:left;
+}
+.boardwriter_1{
+   width:13%;
+   float:left;
+   text-align: center;
+}
+.boardregdate_1{
+   width:17%;
+   float:left;
+   text-align: center;
+}
+.boardhit_1{
+   width:9%;
+   float:left;
+   text-align: center;
+}
+#comments-style{
+   border:2px solid red;
 }
 textarea{
-	width:800px; 
-	height:500px; 
+   width:99%; 
+   height:500px; 
     resize:none;
 }

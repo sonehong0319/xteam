@@ -5,7 +5,6 @@
 	<form:form commandName="boardVO" action="write.do"
 	                        enctype="multipart/form-data">
 		<form:errors element="div" cssClass="error-color"/>
-
 			<div id="bordwrite-title">
 				<label for="board_title">제목</label>
 				<form:input path="board_title"/>
@@ -21,11 +20,12 @@
 				<input type="file" name="upload" id="upload"
 				                     accept="image/gif,image/png,image/jpeg">
 			</div>
-
+		<br>
 		<div class="align-center">
 			<input type="submit" value="전송">
 			<input type="button" value="목록"
 			       onclick="location.href='list.do'">
+			</div>
 		</div>
 	</form:form>
 </div>

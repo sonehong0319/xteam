@@ -80,7 +80,7 @@ public class GameController {
 		return mav;
 	}
 
-	//회원가입 폼 
+	//게임 등록 폼 
 	@RequestMapping(value="/game/write.do",method=RequestMethod.GET)
 	public String form() {
 		return "gameWrite";
@@ -106,6 +106,16 @@ public class GameController {
 
 		return "redirect:/game/gameList.do";
 	}
+	//게임 상세
+	@RequestMapping("/game/gameDetail.do")
+	public ModelAndView process(@RequestParam int gam_num) {
+		if(log.isDebugEnabled()) {
+			log.debug("<<글 상세>> : " + gam_num);
+		}
+		GameVO game = gameService.selectGame(gam_num);
+		
+		return new ModelAndView("gameView","game",game);
+}
 	//이미지 출력
 	@RequestMapping("/game/imageView.do")
 	public ModelAndView viewImage(@RequestParam int gam_num) {
@@ -158,6 +168,7 @@ public class GameController {
 
 		return mav;
 	}
+		
 }
 
 

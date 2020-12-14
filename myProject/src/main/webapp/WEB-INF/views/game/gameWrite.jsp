@@ -5,7 +5,7 @@
 	<form:form commandName="gameVO" action="write.do"
 	                        enctype="multipart/form-data">
 		<form:errors element="div" cssClass="error-color"/>
-
+		<div class="game1">
 			<div id="gamewrite-title">
 				<label for="cate_num">카테고리</label>
 				<form:select path="cate_num">
@@ -49,10 +49,12 @@
 				                     accept="image/gif,image/png,image/jpeg">
 			</div>
 		<div class="align-center">
+		<br>
 			<input type="submit" value="전송">
 			<input type="button" value="목록"
 			       onclick="location.href='list.do'">
 		</div>
+	</div>
 	</form:form>
 </div>
 

@@ -109,13 +109,17 @@
 		<li>이메일 : ${member.mem_email}</li>
 		<li>가입날짜 : ${member.reg_date}</li>
 	</ul>
-	<h2>찜 목록</h2>
 	<div>
 	</div>
 	<h2>구매 목록</h2>
+	<div>
+		
+	</div>
+	
+	
 	<hr size="1" width="100%">
 	<p class="align-right">
-		<input type="button" value="수정"
+		<input type="button" value="회원상세정보 수정"
 		      onclick="location.href='update.do'">
 		<input type="button" value="비밀번호변경"
 		      onclick="location.href='changePassword.do'">

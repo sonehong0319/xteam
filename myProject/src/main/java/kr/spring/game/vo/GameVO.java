@@ -20,12 +20,38 @@ public class GameVO {
 	private String gam_detail; //게임 정보
 	private byte[] gam_uploadfile; //게임 이미지
 	private int cate_num;//카테고리 번호
+	private String cate_name;
+	private String gam_uploadfile2;
 	
 	//이미지 업로드 파일 처리
 	public void setUpload(MultipartFile upload)throws IOException{
 		//MultipartFile -> byte[] 반환
 		setGam_uploadfile(upload.getBytes());
 		
+	}
+
+
+
+	public String getGam_uploadfile2() {
+		return gam_uploadfile2;
+	}
+
+
+
+	public void setGam_uploadfile2(String gam_uploadfile2) {
+		this.gam_uploadfile2 = gam_uploadfile2;
+	}
+
+
+
+	public String getCate_name() {
+		return cate_name;
+	}
+
+
+
+	public void setCate_name(String cate_name) {
+		this.cate_name = cate_name;
 	}
 
 

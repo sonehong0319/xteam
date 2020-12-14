@@ -5,12 +5,25 @@
 #wrap{
 	overflow:hidden;
 }
-.item{
+.item_form{
+	
+}
+.item_tap{
 	margin: 5px;
-	padding: 5px;
-	width: 300px;
-	height:500px;
-	float:left;
+	float: left;
+	display: flex;
+	height: 75px;
+	width: 863px;
+	
+}
+.item_image{
+	
+	
+}
+.item_detail{
+	overflow:hidden;
+	margin-left: 20px;
+	color: black;
 }
 
 </style>  
@@ -18,8 +31,8 @@
 	<h2>게임 상점</h2>
 	<div class="align-right">
 		<c:if test="${!empty user}">
-		<input type="button" value="게임등록" 
-		       onclick="location.href='write.do'">
+				<input type="button" value="게임등록" 
+		      	 onclick="location.href='write.do'">
 		</c:if>
 	</div>
 	
@@ -30,12 +43,17 @@
 	
 	<div id="wrap">
 		<c:forEach var="game" items="${list}">
-		<div class="item">
-			<a href="detail.do?gam_num=${game.gam_num}">
-				<img src="imageView.do?gam_num=${game.gam_num}" style="max-width:295px;max-height:395px;">
-				<br><span>${game.gam_name}</span>
-				<br><span>${game.gam_price}</span>
-			</a>
+		<div class="item_form">
+			<div><a class="item_tap" href="gameDetail.do?gam_num=${game.gam_num}">
+				<div>
+				<img class="item_image" src="imageView.do?gam_num=${game.gam_num}" style="width:184px; height:69px;">
+				</div>
+				<div class="item_detail">
+					 <div><strong>${game.gam_name}</strong></div>
+					 <div>${game.gam_price}원</div>
+					 <div>${game.gam_detail}</div>
+				</div>
+			</a></div>
 		</div>
 		</c:forEach>
 	</div>
