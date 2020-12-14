@@ -21,3 +21,7 @@
 .game_right div{ 
 	margin-top: 5px;
 }
+.pur_form{
+	display: inline-block;
+	margin-right : 30px;
+}

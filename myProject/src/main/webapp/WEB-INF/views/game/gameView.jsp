@@ -27,6 +27,7 @@
             if(!choice){
                return false;
             }
+            var choice = window.confirm('구매가 완료되었습니다.');
 		};
       </script>
 </div>

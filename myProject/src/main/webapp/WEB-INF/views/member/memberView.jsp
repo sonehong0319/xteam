@@ -112,14 +112,38 @@
 	<div>
 	</div>
 	<h2>구매 목록</h2>
-		<div>
-			${purchase.pur_num}
-		</div>
-	<div>
-		
+
+
+	<div id="wrap">
+		<c:forEach var="purchase" items="${list}">
+			<div class="pur_form">
+				<div>
+					<img class="purchase_image"
+						src="gameView.do?gam_num=${purchase.gam_num}"
+						style="width: 184px; height: 69px;">
+				</div>
+				<div>게임 구입 일 : ${purchase.pur_date}</div>
+				<div>
+					<strong>게임 이름 : ${purchase.gam_name}</strong><br><br>
+					<div class="align-center">
+						<input type="button" value="게임하기" id="game">
+					</div>
+				</div>
+				<br>
+				<script>
+					var game = document.getElementById('game');
+					//이벤트 연결
+					game.onclick = function() {
+						var choice = window.confirm('게임이 시작됩니다.');
+						if (choice) {
+							location.href = 'myPage.do';
+						}
+					};
+				</script>
+
+			</div>
+		</c:forEach>
 	</div>
-	
-	
 	<hr size="1" width="100%">
 	<p class="align-right">
 		<input type="button" value="회원상세정보 수정"

@@ -14,6 +14,8 @@
 	 	              *
 	 	            FROM purchase p JOIN member m
 	 	            ON p.mem_num=m.mem_num
+	 	            JOIN games g ON p.gam_num=g.gam_num
+	 	            WHERE P.mem_num=#{mem_num}
 	 	            ORDER BY p.pur_num DESC)a)
 	 <![CDATA[
 	 	WHERE rnum >= #{start} AND rnum <= #{end}
@@ -24,8 +26,10 @@
 	                                resultType="integer">
 	 	SELECT
 	 	   COUNT(*)
-	 	FROM purchase JOIN member m
-	 	ON p.mem_num = m.mem_num                               
+	 	FROM purchase p JOIN member m
+	 	ON p.mem_num=m.mem_num
+	 	JOIN games g ON p.gam_num=g.gam_num 
+	 	WHERE P.mem_num=#{mem_num}                             
 	 </select>
 	   
 	 <update id="updatePurchase" parameterType="purchaseVO">

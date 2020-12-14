@@ -44,12 +44,16 @@ public class PurchaseController {
 				@RequestParam(value="keyfield",defaultValue="")
 				String keyfield,
 				@RequestParam(value="keyword",defaultValue="")
-				String keyword) {
+				String keyword,HttpSession session) {
+			
+			MemberVO user = (MemberVO)session.getAttribute("user");
 			
 			Map<String,Object> map = 
 					new HashMap<String,Object>();
 			map.put("keyfield", keyfield);
 			map.put("keyword", keyword);
+			map.put("mem_num", user.getMem_num());
+			
 			
 			//총 글의 갯수 또는 검색된 글의 갯수
 			int count = purchaseService.selectRowCount(map);
@@ -73,7 +77,7 @@ public class PurchaseController {
 			}
 			
 			ModelAndView mav = new ModelAndView();
-			mav.setViewName("purchase");
+			mav.setViewName("purchaseList");
 			mav.addObject("count",count);
 			mav.addObject("list", list);
 			mav.addObject("pagingHtml", page.getPagingHtml());
@@ -103,10 +107,22 @@ public class PurchaseController {
 			//글쓰기
 			purchaseService.insertPurchase(purchaseVO);
 			
-			return "redirect:/game/gameDetail.do";
+			return "redirect:/game/gameDetail.do?gam_num="+purchaseVO.getGam_num();
 		}
 		
-	
+		//이미지 출력
+		@RequestMapping("/purchase/imageView.do")
+		public ModelAndView viewImage(@RequestParam int purchase_num) {
+			
+			PurchaseVO purchase = purchaseService.selectPurchase(purchase_num);
+			
+			ModelAndView mav = new ModelAndView();
+			mav.setViewName("imageView");
+			                            //byte[]타입의 데이터
+			/*mav.addObject("imageFile", purchase.getPurchase_uploadfile());*/
+			
+			return mav;
+		}
 	
 	
 	
