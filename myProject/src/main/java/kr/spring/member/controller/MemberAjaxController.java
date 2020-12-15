@@ -25,7 +25,7 @@ public class MemberAjaxController {
 	@RequestMapping("/member/confirmId.do")
 	@ResponseBody
 	public Map<String,String> process(
-			           @RequestParam("mem_id") String mem_id){
+			             @RequestParam("mem_id") String mem_id){
 		if(log.isDebugEnabled()) {
 			log.debug("<<아이디 중복 체크>> : " + mem_id);
 		}
@@ -36,10 +36,10 @@ public class MemberAjaxController {
 		MemberVO member = memberService.selectCheckMember(mem_id);
 		if(member!=null) {
 			//아이디 중복
-			map.put("result", "mem_idDuplicated");
+			map.put("result", "idDuplicated");
 		}else {
 			//아이디 미중복
-			map.put("result", "mem_idNotFound");
+			map.put("result", "idNotFound");
 		}
 		
 		return map;

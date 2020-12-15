@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import kr.spring.board.vo.BoardVO;
 import kr.spring.game.service.GameService;
 import kr.spring.game.vo.GameVO;
+import kr.spring.member.service.MemberService;
 import kr.spring.member.vo.MemberVO;
 import kr.spring.util.PagingUtil;
 
@@ -31,6 +31,8 @@ public class GameController {
 	@Resource
 	private GameService gameService;
 
+	@Resource
+	private MemberService memberService;
 	//자바빈(VO) 초기화
 	@ModelAttribute
 	public GameVO initCommand() {
@@ -159,7 +161,9 @@ public class GameController {
 				log.debug("<<글 목록>> : " + list);
 			}
 		}
-
+		
+		
+				
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("gameList");
 		mav.addObject("count",count);

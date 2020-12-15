@@ -12,8 +12,13 @@
 #main_swiper{
 	width: 900px;
 }
-
-
+.i{
+	color: #b8b6b4;
+}
+.align-leftbutton{
+	text-align:left;
+	margin-left : 30px;
+}
 /*board수정*/
 .boardhead-style{
    background-color:#EEEEEE;

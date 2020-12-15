@@ -30,7 +30,7 @@
 	   
 	 <update id="updateBoard" parameterType="boardVO">
 	 	UPDATE board SET
-	 	  <if test="filename!=''">
+	 	  <if test="board_filename!=''">
 	 	  	board_uploadfile=#{board_vuploadfile},
 	 	  	board_filename=#{board_filename},
 	 	  </if>

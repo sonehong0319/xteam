@@ -10,12 +10,12 @@
 	</c:if>
 	<c:if test="${!empty user}">
 	[<span>${user.mem_id}</span>]
-	<a href="${pageContext.request.contextPath}/member/logout.do">로그아웃</a>
-	<a href="${pageContext.request.contextPath}/member/myPage.do">MY페이지</a>
+	<a class="i"href="${pageContext.request.contextPath}/member/logout.do">로그아웃</a>
+	<a class="i"href="${pageContext.request.contextPath}/member/myPage.do">MY페이지</a>
 	</c:if>
 	<c:if test="${empty user}">
-	<a href="${pageContext.request.contextPath}/member/registerUser.do">회원가입</a>
-	<a href="${pageContext.request.contextPath}/member/login.do">로그인</a>	
+	<a class="i"href="${pageContext.request.contextPath}/member/registerUser.do">회원가입</a>
+	<a class="i"href="${pageContext.request.contextPath}/member/login.do">로그인</a>	
 	</c:if>
 </div>
 <div>
@@ -23,9 +23,9 @@
 	<h1 class="align-center">XTEAM 온라인 게임 유통 플랫폼	</h1>
 </div>
 <div id="header_menu" class="align-center">
-	<a href="${pageContext.request.contextPath}/main/main.do">홈으로</a>	
-	<a href="${pageContext.request.contextPath}/game/gameList.do">게임 상점</a>
-	<a href="${pageContext.request.contextPath}/board/list.do">커뮤니티</a>
+	<a class="i"href="${pageContext.request.contextPath}/main/main.do">홈으로</a>	
+	<a class="i"href="${pageContext.request.contextPath}/game/gameList.do">게임 상점</a>
+	<a class="i"href="${pageContext.request.contextPath}/board/list.do">커뮤니티</a>
 </div>
 
 

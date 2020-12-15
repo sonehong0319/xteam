@@ -82,7 +82,7 @@
 <div class="page-main-style">
 	<h2>프로필 사진</h2>
 	<ul>
-		<li>
+		<li class="align-left">
 			<c:if test="${empty member.mem_photoname}">
 			<img src="${pageContext.request.contextPath}/resources/images/blank.jpg" width="100" height="100" class="my-photo">	
 			</c:if>
@@ -91,7 +91,7 @@
 			</c:if>
 		</li>
 		<li>
-			<div class="align-center">
+			<div class="align-leftbutton">
 				<input type="button" value="수정" id="photo_btn">
 			</div>
 			<div id="photo_choice" style="display:none;">
